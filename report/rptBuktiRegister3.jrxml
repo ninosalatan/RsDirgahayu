@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="297" pageHeight="421" columnWidth="233" leftMargin="32" rightMargin="32" topMargin="32" bottomMargin="32" uuid="f3517976-4ee0-448e-a387-c7d7a9eb571b">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="372"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="namars" class="java.lang.String"/>
+	<parameter name="alamatrs" class="java.lang.String"/>
+	<parameter name="kotars" class="java.lang.String"/>
+	<parameter name="propinsirs" class="java.lang.String"/>
+	<parameter name="kontakrs" class="java.lang.String"/>
+	<parameter name="norawat" class="java.lang.String"/>
+	<parameter name="user" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select reg_periksa.no_reg,reg_periksa.no_rawat,reg_periksa.tgl_registrasi,reg_periksa.jam_reg,pasien.no_tlp, reg_periksa.kd_dokter,dokter.nm_dokter,reg_periksa.no_rkm_medis,pasien.nm_pasien,pasien.jk,pasien.umur,pasien.no_peserta,poliklinik.nm_poli,
+reg_periksa.p_jawab,reg_periksa.almt_pj,reg_periksa.hubunganpj,reg_periksa.biaya_reg,
+reg_periksa.stts_daftar,penjab.png_jawab
+from reg_periksa inner join dokter inner join pasien inner join poliklinik inner join penjab
+on reg_periksa.kd_dokter=dokter.kd_dokter and reg_periksa.no_rkm_medis=pasien.no_rkm_medis and reg_periksa.kd_pj=penjab.kd_pj and reg_periksa.kd_poli=poliklinik.kd_poli where reg_periksa.no_rawat=$P{norawat}]]>
+	</queryString>
+	<field name="no_reg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_rawat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_registrasi" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jam_reg" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_tlp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kd_dokter" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nm_dokter" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_rkm_medis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nm_pasien" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="umur" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_peserta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nm_poli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="p_jawab" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="almt_pj" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hubunganpj" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="biaya_reg" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stts_daftar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="png_jawab" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="357" splitType="Stretch">
+			<textField>
+				<reportElement x="50" y="91" width="189" height="18" uuid="9bfc8e5c-a691-4dcc-b818-e864b19f6aca"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{nm_pasien}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="109" width="189" height="18" uuid="e39f94cc-444c-4ede-9576-235fb8f55cb6"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{no_rkm_medis}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-21" y="35" width="271" height="1" forecolor="#006666" uuid="e1e289ac-8ed2-4fde-ac93-87cc4c30758e"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="-16" y="91" width="61" height="18" uuid="35fb5cf0-19e6-4a4a-aff7-9b9751a3edcc"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-16" y="109" width="61" height="18" uuid="a26b454c-4aa4-4739-bce7-4d8cd43efa21"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[No.RM]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="-11" y="18" width="251" height="15" uuid="7552b54c-992d-41bc-adb0-cf833b797926"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{kontakrs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-11" y="2" width="251" height="15" uuid="ba844921-1971-45ff-aae6-c9bd3f64d273"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alamatrs}+", "+$P{kotars}+", "+$P{propinsirs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-11" y="-14" width="251" height="15" uuid="d5a944e0-bf94-4767-8ba3-b8c05f36d676"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{namars}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-16" y="147" width="61" height="18" uuid="41443954-e874-469e-8328-4b66932b23ed"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="147" width="189" height="18" uuid="9cdf550c-632c-472b-97e8-f570e100fad5"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{almt_pj}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-16" y="227" width="62" height="18" uuid="f58f4483-0247-479f-818a-82ef74f1afff"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Poliklinik]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="51" y="227" width="189" height="18" uuid="b2b1b5ea-c6c7-4aaf-915f-32664a5ba1cc"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{nm_poli}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-16" y="128" width="66" height="18" uuid="78539b80-7db7-4987-b4b6-7dd04d2c537b"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="128" width="189" height="18" uuid="e9f704d0-84f1-4078-92cd-4edc19d8a6b6"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{jk}.replaceAll("L","Laki-Laki").replaceAll("P","Perempuan")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-21" y="38" width="271" height="18" uuid="a760c0cb-89a2-4831-a9e7-10c0a2f86f6d"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10" isBold="true" isUnderline="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[LEMBAR REGISTRASI PASIEN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-16" y="54" width="62" height="18" uuid="d4c1d423-a085-47f2-9a27-723db40c3533"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="51" y="54" width="189" height="18" uuid="f59e148e-69f0-4394-9d12-97bfe8bbe22f"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{tgl_registrasi}+" "+$F{jam_reg}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-16" y="73" width="61" height="18" uuid="18445b50-c243-479e-9d2f-9856777f3060"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[No.Rawat]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="208" width="189" height="18" uuid="a774dbab-7e16-4035-b01f-1ba3946ab9a2"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{no_peserta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-16" y="167" width="61" height="18" uuid="80213d60-6f82-4e4e-9ae0-704fb4b02ad6"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Umur]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="167" width="189" height="18" uuid="10cd5cf6-1aca-43a6-b12e-f2c609fd9f0a"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{umur}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-20" y="280" width="100" height="18" uuid="b3cb9d8e-4a70-483a-aaf5-2158768f178a"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[No.Antri Poli]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="-20" y="298" width="100" height="52" uuid="9aaddc76-aa35-4c97-92e0-83eaa0c0bde2"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="20" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no_reg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="247" width="189" height="18" uuid="95b25c3f-ec4b-4f37-add9-150ead211b9a"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{nm_dokter}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-16" y="247" width="62" height="18" uuid="d844bc3f-01ad-4112-9512-df69835420fd"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Dokter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-16" y="186" width="61" height="18" uuid="10441fb4-4267-4e7b-8e27-1e5cc64906f4"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Cara Bayar]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="186" width="189" height="18" uuid="7152155d-3fd3-45c3-9a53-86944c40b12b"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{png_jawab}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-20" y="354" width="271" height="1" forecolor="#006666" uuid="766256a3-7f48-4737-95da-15195e0829f6"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="250" y="-17" width="1" height="371" uuid="c2d3c1dd-e5a3-4a3c-b6b9-fe773c72801b"/>
+			</line>
+			<line>
+				<reportElement x="-20" y="-17" width="1" height="371" uuid="575702a7-cb93-43cb-90b5-64aba4aefd84"/>
+			</line>
+			<line>
+				<reportElement x="-20" y="-17" width="270" height="1" uuid="cc62b8a3-e8a7-464f-a49e-482592f59483"/>
+			</line>
+			<staticText>
+				<reportElement x="-16" y="208" width="61" height="18" uuid="04b88428-74cf-47e1-a5f3-c0fb68193de4"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[No Jaminan]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="51" y="73" width="189" height="18" uuid="a7d105f1-c0ef-4a80-800f-9b8dec078160"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{no_rawat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="110" y="280" width="140" height="18" uuid="17706d30-d419-4d09-a890-af42252ec7cc"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Petugas Loket]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="274" width="271" height="1" forecolor="#006666" uuid="40d01953-1f9c-4349-ab63-ab81396933d6"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="110" y="329" width="134" height="21" uuid="fa5160cf-26d5-4dff-a3e0-28e12dbc2e38"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{user}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1793ee10-744b-46c8-b803-7d5072ea5269">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="291" splitType="Stretch">
+			<textField>
+				<reportElement x="80" y="30" width="474" height="30" uuid="ab03b8d2-c4de-4928-ab37-631ac0957582"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="18" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alamatrs}+", "+$P{kotars}+", "+$P{propinsirs}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" onErrorType="Blank">
+				<reportElement x="0" y="1" width="70" height="75" uuid="0753f75b-bfc5-428d-87d8-0f92ac5ca42d"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="80" y="0" width="474" height="30" uuid="d9ddcf0f-f6ea-42fa-b9d5-f5f437eae2dd"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="20" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{namars}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="77" width="555" height="1" uuid="83b92913-af42-4cde-b1f5-8f4ccd01635a"/>
+				<box>
+					<pen lineWidth="0.75" lineStyle="Solid"/>
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="6" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Billing]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="112" width="100" height="19" uuid="501249c4-f7fe-4fd7-a372-ce9be25bee3c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Nama Pasien]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="86" width="100" height="19" uuid="010f6c40-cb43-420f-8667-ec1d80acd7d4"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[No. RM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="112" width="25" height="19" uuid="f43a2435-dc96-4c2d-b5a8-a2c5bc7c12db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="104" y="86" width="26" height="19" uuid="2aac4b11-a93e-4a1e-b0dc-c5c4d0959ef1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="137" width="100" height="19" uuid="3480ef5e-d23c-4de1-a1a9-980194d69527"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="137" width="25" height="19" uuid="30ad8fbd-f619-467f-af4a-d7eb3a227d86"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="163" width="100" height="19" uuid="3df4eacb-1c4c-469d-81d0-8a15835ac450"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Dokter PJ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="163" width="25" height="19" uuid="2e4a6fd4-86f3-43b4-850e-dc51290917c5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="171" width="100" height="19" uuid="bcaaead1-5cab-4e62-aca2-e67e7cecb36f"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Petugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="191" width="25" height="19" uuid="6df535f2-747c-4bd0-8c45-6ace80fa5645"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="221" y="86" width="334" height="19" uuid="6c9d8801-0788-47e2-bfc0-2f1c82129e86"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{no_rm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="112" width="334" height="19" uuid="8e829c10-5338-4680-8b03-0105e58a5779"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nm_pasien}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="137" width="334" height="19" uuid="7f266da5-c721-4a58-a738-6c065490e36f"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tanggal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="162" width="334" height="19" uuid="53ca86f2-8eda-464c-9589-781158e0950a"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{no_rawat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="191" width="334" height="19" uuid="9e8a02b0-82aa-4002-874d-210cee470a01"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nm_petugas}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="130" y="231" width="280" height="20" uuid="4f2d5968-b226-41fa-b9f0-078e18fcf588"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Billing Radiologi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="11" y="271" width="38" height="19" forecolor="#595656" backcolor="#99FFFF" uuid="a9c3eba2-fcca-473d-a422-75be42aa1cef"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#595656"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="49" y="271" width="312" height="19" forecolor="#595656" backcolor="#99FFFF" uuid="2c7e7beb-94db-4d74-8554-3eb1fe12cbd5"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#595656"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Perawatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="361" y="271" width="189" height="19" forecolor="#595656" backcolor="#99FFFF" uuid="3f844cdb-ea91-4ff4-a7a2-b080312e5958"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#595656"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Biaya]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="11" y="0" width="37" height="19" forecolor="#595656" uuid="bfcd9524-6a47-4e1c-809f-cdafcb2b6a89"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="0" width="312" height="19" forecolor="#595656" uuid="584ed672-ac4f-4667-aab8-db5d964e6b49"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm_perawatan}]]></textFieldExpression>
+			</textField>
+			<textField pattern="Rp. ">
+				<reportElement x="361" y="0" width="189" height="19" forecolor="#595656" uuid="2c9476ca-e7cb-472e-9de2-57d070904434"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#595656"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_byr}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="29" splitType="Stretch"/>
+	</summary>
+</jasperReport>

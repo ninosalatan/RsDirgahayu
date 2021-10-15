@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="144" pageHeight="265" columnWidth="134" leftMargin="5" rightMargin="5" topMargin="5" bottomMargin="5" uuid="c1647054-8e76-4376-bb8c-c912e58a1bee">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="29"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="0"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="1000"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="koneksi"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="namars" class="java.lang.String"/>
+	<parameter name="alamatrs" class="java.lang.String"/>
+	<parameter name="kotars" class="java.lang.String"/>
+	<parameter name="propinsirs" class="java.lang.String"/>
+	<parameter name="kontakrs" class="java.lang.String"/>
+	<parameter name="logo" class="java.io.InputStream"/>
+	<parameter name="no_rm" class="java.lang.String"/>
+	<parameter name="nm_pasien" class="java.lang.String"/>
+	<parameter name="tanggal" class="java.lang.String"/>
+	<parameter name="nm_dockter" class="java.lang.String"/>
+	<parameter name="nm_petugas" class="java.lang.String"/>
+	<parameter name="no_rawat" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select ROW_NUMBER() OVER(PARTITION BY no_rawat) AS no,reg_periksa.no_rawat,nm_perawatan,biaya_rawat from reg_periksa
+left join rawat_jl_dr on rawat_jl_dr.no_rawat=reg_periksa.no_rawat
+inner join jns_perawatan on jns_perawatan.kd_jenis_prw=rawat_jl_dr.kd_jenis_prw
+where reg_periksa.no_rawat='$P{no_rawat}']]>
+	</queryString>
+	<field name="no" class="java.lang.Integer"/>
+	<field name="nm_perawatan" class="java.lang.String"/>
+	<field name="biaya_rawat" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="13" width="18" height="10" forecolor="#595656" backcolor="#99FFFF" uuid="a3b2e9a2-3108-4e87-85b2-c43d61c5bead"/>
+				<box>
+					<pen lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="20" y="13" width="72" height="12" forecolor="#595656" backcolor="#99FFFF" uuid="bc99eb66-ef96-473d-baa6-2d534d2f1c12"/>
+				<box>
+					<pen lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Perawatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="92" y="13" width="43" height="10" forecolor="#595656" backcolor="#99FFFF" uuid="0175ee3f-0114-4878-8fd0-326535c96991"/>
+				<box>
+					<pen lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Biaya]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="2" y="23" width="18" height="9" forecolor="#595656" uuid="2b1531db-3772-415f-a00d-c2dcd1cdd193"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="23" width="72" height="9" forecolor="#595656" uuid="d876bd99-062b-4108-be54-447477d82444"/>
+				<textElement textAlignment="Justified">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm_perawatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="23" width="43" height="9" forecolor="#595656" uuid="a609555d-c138-4d87-87d0-113d652946a1"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{biaya_rawat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
